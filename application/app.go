@@ -24,6 +24,7 @@ func (a *App) Start(ctx context.Context) error {
 		Handler: a.router,
 	}
 
+	fmt.Println("starting server on :3000")
 	err := server.ListenAndServe()
 	if err != nil {
 		return fmt.Errorf("failed to start server: %w", err)
